@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  buyer_profile_id: 
+  title: MyString
+  value_proposition: MyText
+  objective: MyText
+  plan_desc: MyText
+  type_of_activity: MyText
+  start_date: 2015-08-01
+  end_date: 2015-08-01
+  implementation_team: MyText
+  estimated_budget: MyText
+  media_strat: MyText
+  distro_channels: MyText
+  milestone_of_completion: MyText
+  success_indicator: MyText
+  monitor_method: MyText
+  outcomes: MyText
+  appendix_additional: MyText
+
+two:
+  buyer_profile_id: 
+  title: MyString
+  value_proposition: MyText
+  objective: MyText
+  plan_desc: MyText
+  type_of_activity: MyText
+  start_date: 2015-08-01
+  end_date: 2015-08-01
+  implementation_team: MyText
+  estimated_budget: MyText
+  media_strat: MyText
+  distro_channels: MyText
+  milestone_of_completion: MyText
+  success_indicator: MyText
+  monitor_method: MyText
+  outcomes: MyText
+  appendix_additional: MyText
