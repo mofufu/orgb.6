@@ -1,0 +1,46 @@
+<%= simple_form_for(@business_plan) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <%= f.input :ownership %>
+    <%= f.input :start_plan %>
+    <%= f.input :location %>
+    <%= f.input :organization_structure %>
+    <%= f.input :management_team %>
+    <%= f.input :team_gaps %>
+    <%= f.input :personnel_plan %>
+    <%= f.input :product_desc %>
+    <%= f.input :sourcing_and_fulfillment %>
+    <%= f.input :technology_used %>
+    <%= f.input :expansion_plan %>
+    <%= f.input :value_prop %>
+    <%= f.input :competitive_advantage %>
+    <%= f.input :positioning_statement %>
+    <%= f.input :pricing_strategy %>
+    <%= f.input :general_promo_strat %>
+    <%= f.input :distro_patterns %>
+    <%= f.input :sales_strat %>
+    <%= f.input :sales_programs %>
+    <%= f.input :strategic_partner %>
+    <%= f.input :milestone %>
+    <%= f.input :segmentation_strategy %>
+    <%= f.input :market_needs %>
+    <%= f.input :market_trends %>
+    <%= f.input :market_growth_potential %>
+    <%= f.input :industry_analysis %>
+    <%= f.input :industry_participants %>
+    <%= f.input :distro_patterns %>
+    <%= f.input :buying_patterns %>
+    <%= f.input :financial_assumptions %>
+    <%= f.input :financial_indicators %>
+    <%= f.input :pandl %>
+    <%= f.input :cash_flow %>
+    <%= f.input :balance_sheet %>
+    <%= f.input :long_term %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,95 @@
+<h1>Listing business_plans</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Ownership</th>
+      <th>Start plan</th>
+      <th>Location</th>
+      <th>Organization structure</th>
+      <th>Management team</th>
+      <th>Team gaps</th>
+      <th>Personnel plan</th>
+      <th>Product desc</th>
+      <th>Sourcing and fulfillment</th>
+      <th>Technology used</th>
+      <th>Expansion plan</th>
+      <th>Value prop</th>
+      <th>Competitive advantage</th>
+      <th>Positioning statement</th>
+      <th>Pricing strategy</th>
+      <th>General promo strat</th>
+      <th>Distro patterns</th>
+      <th>Sales strat</th>
+      <th>Sales programs</th>
+      <th>Strategic partner</th>
+      <th>Milestone</th>
+      <th>Segmentation strategy</th>
+      <th>Market needs</th>
+      <th>Market trends</th>
+      <th>Market growth potential</th>
+      <th>Industry analysis</th>
+      <th>Industry participants</th>
+      <th>Distro patterns</th>
+      <th>Buying patterns</th>
+      <th>Financial assumptions</th>
+      <th>Financial indicators</th>
+      <th>Pandl</th>
+      <th>Cash flow</th>
+      <th>Balance sheet</th>
+      <th>Long term</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @business_plans.each do |business_plan| %>
+      <tr>
+        <td><%= business_plan.title %></td>
+        <td><%= business_plan.ownership %></td>
+        <td><%= business_plan.start_plan %></td>
+        <td><%= business_plan.location %></td>
+        <td><%= business_plan.organization_structure %></td>
+        <td><%= business_plan.management_team %></td>
+        <td><%= business_plan.team_gaps %></td>
+        <td><%= business_plan.personnel_plan %></td>
+        <td><%= business_plan.product_desc %></td>
+        <td><%= business_plan.sourcing_and_fulfillment %></td>
+        <td><%= business_plan.technology_used %></td>
+        <td><%= business_plan.expansion_plan %></td>
+        <td><%= business_plan.value_prop %></td>
+        <td><%= business_plan.competitive_advantage %></td>
+        <td><%= business_plan.positioning_statement %></td>
+        <td><%= business_plan.pricing_strategy %></td>
+        <td><%= business_plan.general_promo_strat %></td>
+        <td><%= business_plan.distro_patterns %></td>
+        <td><%= business_plan.sales_strat %></td>
+        <td><%= business_plan.sales_programs %></td>
+        <td><%= business_plan.strategic_partner %></td>
+        <td><%= business_plan.milestone %></td>
+        <td><%= business_plan.segmentation_strategy %></td>
+        <td><%= business_plan.market_needs %></td>
+        <td><%= business_plan.market_trends %></td>
+        <td><%= business_plan.market_growth_potential %></td>
+        <td><%= business_plan.industry_analysis %></td>
+        <td><%= business_plan.industry_participants %></td>
+        <td><%= business_plan.distro_patterns %></td>
+        <td><%= business_plan.buying_patterns %></td>
+        <td><%= business_plan.financial_assumptions %></td>
+        <td><%= business_plan.financial_indicators %></td>
+        <td><%= business_plan.pandl %></td>
+        <td><%= business_plan.cash_flow %></td>
+        <td><%= business_plan.balance_sheet %></td>
+        <td><%= business_plan.long_term %></td>
+        <td><%= link_to 'Show', business_plan %></td>
+        <td><%= link_to 'Edit', edit_business_plan_path(business_plan) %></td>
+        <td><%= link_to 'Destroy', business_plan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Business plan', new_business_plan_path %>
