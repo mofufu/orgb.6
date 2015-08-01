@@ -1,0 +1,27 @@
+<%= simple_form_for(@marketing_plan) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :buyer_profile %>
+    <%= f.input :title %>
+    <%= f.input :value_proposition %>
+    <%= f.input :objective %>
+    <%= f.input :plan_desc %>
+    <%= f.input :type_of_activity %>
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+    <%= f.input :implementation_team %>
+    <%= f.input :estimated_budget %>
+    <%= f.input :media_strat %>
+    <%= f.input :distro_channels %>
+    <%= f.input :milestone_of_completion %>
+    <%= f.input :success_indicator %>
+    <%= f.input :monitor_method %>
+    <%= f.input :outcomes %>
+    <%= f.input :appendix_additional %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

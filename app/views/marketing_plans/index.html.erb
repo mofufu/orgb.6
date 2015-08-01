@@ -1,0 +1,57 @@
+<h1>Listing marketing_plans</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Buyer profile</th>
+      <th>Title</th>
+      <th>Value proposition</th>
+      <th>Objective</th>
+      <th>Plan desc</th>
+      <th>Type of activity</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Implementation team</th>
+      <th>Estimated budget</th>
+      <th>Media strat</th>
+      <th>Distro channels</th>
+      <th>Milestone of completion</th>
+      <th>Success indicator</th>
+      <th>Monitor method</th>
+      <th>Outcomes</th>
+      <th>Appendix additional</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @marketing_plans.each do |marketing_plan| %>
+      <tr>
+        <td><%= marketing_plan.buyer_profile %></td>
+        <td><%= marketing_plan.title %></td>
+        <td><%= marketing_plan.value_proposition %></td>
+        <td><%= marketing_plan.objective %></td>
+        <td><%= marketing_plan.plan_desc %></td>
+        <td><%= marketing_plan.type_of_activity %></td>
+        <td><%= marketing_plan.start_date %></td>
+        <td><%= marketing_plan.end_date %></td>
+        <td><%= marketing_plan.implementation_team %></td>
+        <td><%= marketing_plan.estimated_budget %></td>
+        <td><%= marketing_plan.media_strat %></td>
+        <td><%= marketing_plan.distro_channels %></td>
+        <td><%= marketing_plan.milestone_of_completion %></td>
+        <td><%= marketing_plan.success_indicator %></td>
+        <td><%= marketing_plan.monitor_method %></td>
+        <td><%= marketing_plan.outcomes %></td>
+        <td><%= marketing_plan.appendix_additional %></td>
+        <td><%= link_to 'Show', marketing_plan %></td>
+        <td><%= link_to 'Edit', edit_marketing_plan_path(marketing_plan) %></td>
+        <td><%= link_to 'Destroy', marketing_plan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Marketing plan', new_marketing_plan_path %>
