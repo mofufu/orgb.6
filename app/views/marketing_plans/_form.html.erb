@@ -1,27 +1,106 @@
-<%= simple_form_for(@marketing_plan) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.association :buyer_profile %>
-    <%= f.input :title %>
-    <%= f.input :value_proposition %>
-    <%= f.input :objective %>
-    <%= f.input :plan_desc %>
-    <%= f.input :type_of_activity %>
-    <%= f.input :start_date %>
-    <%= f.input :end_date %>
-    <%= f.input :implementation_team %>
-    <%= f.input :estimated_budget %>
-    <%= f.input :media_strat %>
-    <%= f.input :distro_channels %>
-    <%= f.input :milestone_of_completion %>
-    <%= f.input :success_indicator %>
-    <%= f.input :monitor_method %>
-    <%= f.input :outcomes %>
-    <%= f.input :appendix_additional %>
+<%= form_for @marketing_plan, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :title, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :title, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :value_proposition, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :value_proposition, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :objective, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :objective, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :plan_desc, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :plan_desc, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :type_of_activity, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :type_of_activity, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :start_date, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.date_select :start_date, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :end_date, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.date_select :end_date, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :implementation_team, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :implementation_team, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :estimated_budget, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :estimated_budget, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :media_strat, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :media_strat, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :distro_channels, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :distro_channels, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :milestone_of_completion, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :milestone_of_completion, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :success_indicator, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :success_indicator, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :monitor_method, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :monitor_method, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :outcomes, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :outcomes, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :appendix_additional, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :appendix_additional, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  marketing_plans_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>

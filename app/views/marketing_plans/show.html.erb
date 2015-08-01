@@ -1,89 +1,54 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = MarketingPlan -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => MarketingPlan %></h1>
+</div>
 
-<p>
-  <strong>Buyer profile:</strong>
-  <%= @marketing_plan.buyer_profile %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:title) %></dt>
+      <dd><pre class="prettyprint"><%= @marketing_plan.title %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:value_proposition) %></dt>
+      <dd><pre class="prettyprint"><%= @marketing_plan.value_proposition %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:objective) %></dt>
+      <dd><pre class="prettyprint"><%= @marketing_plan.objective %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:plan_desc) %></dt>
+      <dd><pre class="prettyprint"><%= @marketing_plan.plan_desc %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:type_of_activity) %></dt>
+      <dd><pre class="prettyprint"><%= @marketing_plan.type_of_activity %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:start_date) %></dt>
+      <dd><pre class="prettyprint"><%= @marketing_plan.start_date %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:end_date) %></dt>
+      <dd><pre class="prettyprint"><%= @marketing_plan.end_date %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:implementation_team) %></dt>
+      <dd><pre class="prettyprint"><%= @marketing_plan.implementation_team %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:estimated_budget) %></dt>
+      <dd><pre class="prettyprint"><%= @marketing_plan.estimated_budget %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:media_strat) %></dt>
+      <dd><pre class="prettyprint"><%= @marketing_plan.media_strat %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:distro_channels) %></dt>
+      <dd><pre class="prettyprint"><%= @marketing_plan.distro_channels %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:milestone_of_completion) %></dt>
+      <dd><pre class="prettyprint"><%= @marketing_plan.milestone_of_completion %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:success_indicator) %></dt>
+      <dd><pre class="prettyprint"><%= @marketing_plan.success_indicator %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:monitor_method) %></dt>
+      <dd><pre class="prettyprint"><%= @marketing_plan.monitor_method %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:outcomes) %></dt>
+      <dd><pre class="prettyprint"><%= @marketing_plan.outcomes %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:appendix_additional) %></dt>
+      <dd><pre class="prettyprint"><%= @marketing_plan.appendix_additional %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @marketing_plan.title %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              marketing_plans_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_marketing_plan_path(@marketing_plan), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              marketing_plan_path(@marketing_plan),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Value proposition:</strong>
-  <%= @marketing_plan.value_proposition %>
-</p>
-
-<p>
-  <strong>Objective:</strong>
-  <%= @marketing_plan.objective %>
-</p>
-
-<p>
-  <strong>Plan desc:</strong>
-  <%= @marketing_plan.plan_desc %>
-</p>
-
-<p>
-  <strong>Type of activity:</strong>
-  <%= @marketing_plan.type_of_activity %>
-</p>
-
-<p>
-  <strong>Start date:</strong>
-  <%= @marketing_plan.start_date %>
-</p>
-
-<p>
-  <strong>End date:</strong>
-  <%= @marketing_plan.end_date %>
-</p>
-
-<p>
-  <strong>Implementation team:</strong>
-  <%= @marketing_plan.implementation_team %>
-</p>
-
-<p>
-  <strong>Estimated budget:</strong>
-  <%= @marketing_plan.estimated_budget %>
-</p>
-
-<p>
-  <strong>Media strat:</strong>
-  <%= @marketing_plan.media_strat %>
-</p>
-
-<p>
-  <strong>Distro channels:</strong>
-  <%= @marketing_plan.distro_channels %>
-</p>
-
-<p>
-  <strong>Milestone of completion:</strong>
-  <%= @marketing_plan.milestone_of_completion %>
-</p>
-
-<p>
-  <strong>Success indicator:</strong>
-  <%= @marketing_plan.success_indicator %>
-</p>
-
-<p>
-  <strong>Monitor method:</strong>
-  <%= @marketing_plan.monitor_method %>
-</p>
-
-<p>
-  <strong>Outcomes:</strong>
-  <%= @marketing_plan.outcomes %>
-</p>
-
-<p>
-  <strong>Appendix additional:</strong>
-  <%= @marketing_plan.appendix_additional %>
-</p>
-
-<%= link_to 'Edit', edit_marketing_plan_path(@marketing_plan) %> |
-<%= link_to 'Back', marketing_plans_path %>
