@@ -1,184 +1,94 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = BusinessPlan -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => BusinessPlan %></h1>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @business_plan.title %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:title) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.title %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:ownership) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.ownership %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:start_plan) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.start_plan %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:location) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.location %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:organization_structure) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.organization_structure %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:management_team) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.management_team %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:team_gaps) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.team_gaps %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:personnel_plan) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.personnel_plan %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:product_desc) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.product_desc %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:sourcing_and_fulfillment) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.sourcing_and_fulfillment %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:technology_used) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.technology_used %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:expansion_plan) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.expansion_plan %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:value_prop) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.value_prop %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:competitive_advantage) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.competitive_advantage %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:positioning_statement) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.positioning_statement %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:pricing_strategy) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.pricing_strategy %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:general_promo_strat) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.general_promo_strat %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:distro_patterns) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.distro_patterns %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:sales_strat) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.sales_strat %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:sales_programs) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.sales_programs %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:strategic_partner) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.strategic_partner %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:milestone) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.milestone %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:segmentation_strategy) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.segmentation_strategy %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:market_needs) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.market_needs %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:market_trends) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.market_trends %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:market_growth_potential) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.market_growth_potential %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:industry_analysis) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.industry_analysis %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:industry_participants) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.industry_participants %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:distro_patterns) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.distro_patterns %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:buying_patterns) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.buying_patterns %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:financial_assumptions) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.financial_assumptions %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:financial_indicators) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.financial_indicators %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:pandl) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.pandl %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:cash_flow) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.cash_flow %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:balance_sheet) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.balance_sheet %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:long_term) %></dt>
+      <dd><pre class="prettyprint"><%= @business_plan.long_term %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Ownership:</strong>
-  <%= @business_plan.ownership %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              business_plans_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_business_plan_path(@business_plan), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              business_plan_path(@business_plan),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Start plan:</strong>
-  <%= @business_plan.start_plan %>
-</p>
-
-<p>
-  <strong>Location:</strong>
-  <%= @business_plan.location %>
-</p>
-
-<p>
-  <strong>Organization structure:</strong>
-  <%= @business_plan.organization_structure %>
-</p>
-
-<p>
-  <strong>Management team:</strong>
-  <%= @business_plan.management_team %>
-</p>
-
-<p>
-  <strong>Team gaps:</strong>
-  <%= @business_plan.team_gaps %>
-</p>
-
-<p>
-  <strong>Personnel plan:</strong>
-  <%= @business_plan.personnel_plan %>
-</p>
-
-<p>
-  <strong>Product desc:</strong>
-  <%= @business_plan.product_desc %>
-</p>
-
-<p>
-  <strong>Sourcing and fulfillment:</strong>
-  <%= @business_plan.sourcing_and_fulfillment %>
-</p>
-
-<p>
-  <strong>Technology used:</strong>
-  <%= @business_plan.technology_used %>
-</p>
-
-<p>
-  <strong>Expansion plan:</strong>
-  <%= @business_plan.expansion_plan %>
-</p>
-
-<p>
-  <strong>Value prop:</strong>
-  <%= @business_plan.value_prop %>
-</p>
-
-<p>
-  <strong>Competitive advantage:</strong>
-  <%= @business_plan.competitive_advantage %>
-</p>
-
-<p>
-  <strong>Positioning statement:</strong>
-  <%= @business_plan.positioning_statement %>
-</p>
-
-<p>
-  <strong>Pricing strategy:</strong>
-  <%= @business_plan.pricing_strategy %>
-</p>
-
-<p>
-  <strong>General promo strat:</strong>
-  <%= @business_plan.general_promo_strat %>
-</p>
-
-<p>
-  <strong>Distro patterns:</strong>
-  <%= @business_plan.distro_patterns %>
-</p>
-
-<p>
-  <strong>Sales strat:</strong>
-  <%= @business_plan.sales_strat %>
-</p>
-
-<p>
-  <strong>Sales programs:</strong>
-  <%= @business_plan.sales_programs %>
-</p>
-
-<p>
-  <strong>Strategic partner:</strong>
-  <%= @business_plan.strategic_partner %>
-</p>
-
-<p>
-  <strong>Milestone:</strong>
-  <%= @business_plan.milestone %>
-</p>
-
-<p>
-  <strong>Segmentation strategy:</strong>
-  <%= @business_plan.segmentation_strategy %>
-</p>
-
-<p>
-  <strong>Market needs:</strong>
-  <%= @business_plan.market_needs %>
-</p>
-
-<p>
-  <strong>Market trends:</strong>
-  <%= @business_plan.market_trends %>
-</p>
-
-<p>
-  <strong>Market growth potential:</strong>
-  <%= @business_plan.market_growth_potential %>
-</p>
-
-<p>
-  <strong>Industry analysis:</strong>
-  <%= @business_plan.industry_analysis %>
-</p>
-
-<p>
-  <strong>Industry participants:</strong>
-  <%= @business_plan.industry_participants %>
-</p>
-
-<p>
-  <strong>Distro patterns:</strong>
-  <%= @business_plan.distro_patterns %>
-</p>
-
-<p>
-  <strong>Buying patterns:</strong>
-  <%= @business_plan.buying_patterns %>
-</p>
-
-<p>
-  <strong>Financial assumptions:</strong>
-  <%= @business_plan.financial_assumptions %>
-</p>
-
-<p>
-  <strong>Financial indicators:</strong>
-  <%= @business_plan.financial_indicators %>
-</p>
-
-<p>
-  <strong>Pandl:</strong>
-  <%= @business_plan.pandl %>
-</p>
-
-<p>
-  <strong>Cash flow:</strong>
-  <%= @business_plan.cash_flow %>
-</p>
-
-<p>
-  <strong>Balance sheet:</strong>
-  <%= @business_plan.balance_sheet %>
-</p>
-
-<p>
-  <strong>Long term:</strong>
-  <%= @business_plan.long_term %>
-</p>
-
-<%= link_to 'Edit', edit_business_plan_path(@business_plan) %> |
-<%= link_to 'Back', business_plans_path %>

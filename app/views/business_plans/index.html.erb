@@ -1,51 +1,55 @@
-<h1>Listing business_plans</h1>
-
-<table>
+<%- model_class = BusinessPlan -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => BusinessPlan %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Ownership</th>
-      <th>Start plan</th>
-      <th>Location</th>
-      <th>Organization structure</th>
-      <th>Management team</th>
-      <th>Team gaps</th>
-      <th>Personnel plan</th>
-      <th>Product desc</th>
-      <th>Sourcing and fulfillment</th>
-      <th>Technology used</th>
-      <th>Expansion plan</th>
-      <th>Value prop</th>
-      <th>Competitive advantage</th>
-      <th>Positioning statement</th>
-      <th>Pricing strategy</th>
-      <th>General promo strat</th>
-      <th>Distro patterns</th>
-      <th>Sales strat</th>
-      <th>Sales programs</th>
-      <th>Strategic partner</th>
-      <th>Milestone</th>
-      <th>Segmentation strategy</th>
-      <th>Market needs</th>
-      <th>Market trends</th>
-      <th>Market growth potential</th>
-      <th>Industry analysis</th>
-      <th>Industry participants</th>
-      <th>Distro patterns</th>
-      <th>Buying patterns</th>
-      <th>Financial assumptions</th>
-      <th>Financial indicators</th>
-      <th>Pandl</th>
-      <th>Cash flow</th>
-      <th>Balance sheet</th>
-      <th>Long term</th>
-      <th colspan="3"></th>
+      <th>ID</th>
+      <th><%= model_class.human_attribute_name(:title) %></th>
+      <th><%= model_class.human_attribute_name(:ownership) %></th>
+      <th><%= model_class.human_attribute_name(:start_plan) %></th>
+      <th><%= model_class.human_attribute_name(:location) %></th>
+      <th><%= model_class.human_attribute_name(:organization_structure) %></th>
+      <th><%= model_class.human_attribute_name(:management_team) %></th>
+      <th><%= model_class.human_attribute_name(:team_gaps) %></th>
+      <th><%= model_class.human_attribute_name(:personnel_plan) %></th>
+      <th><%= model_class.human_attribute_name(:product_desc) %></th>
+      <th><%= model_class.human_attribute_name(:sourcing_and_fulfillment) %></th>
+      <th><%= model_class.human_attribute_name(:technology_used) %></th>
+      <th><%= model_class.human_attribute_name(:expansion_plan) %></th>
+      <th><%= model_class.human_attribute_name(:value_prop) %></th>
+      <th><%= model_class.human_attribute_name(:competitive_advantage) %></th>
+      <th><%= model_class.human_attribute_name(:positioning_statement) %></th>
+      <th><%= model_class.human_attribute_name(:pricing_strategy) %></th>
+      <th><%= model_class.human_attribute_name(:general_promo_strat) %></th>
+      <th><%= model_class.human_attribute_name(:distro_patterns) %></th>
+      <th><%= model_class.human_attribute_name(:sales_strat) %></th>
+      <th><%= model_class.human_attribute_name(:sales_programs) %></th>
+      <th><%= model_class.human_attribute_name(:strategic_partner) %></th>
+      <th><%= model_class.human_attribute_name(:milestone) %></th>
+      <th><%= model_class.human_attribute_name(:segmentation_strategy) %></th>
+      <th><%= model_class.human_attribute_name(:market_needs) %></th>
+      <th><%= model_class.human_attribute_name(:market_trends) %></th>
+      <th><%= model_class.human_attribute_name(:market_growth_potential) %></th>
+      <th><%= model_class.human_attribute_name(:industry_analysis) %></th>
+      <th><%= model_class.human_attribute_name(:industry_participants) %></th>
+      <th><%= model_class.human_attribute_name(:distro_patterns) %></th>
+      <th><%= model_class.human_attribute_name(:buying_patterns) %></th>
+      <th><%= model_class.human_attribute_name(:financial_assumptions) %></th>
+      <th><%= model_class.human_attribute_name(:financial_indicators) %></th>
+      <th><%= model_class.human_attribute_name(:pandl) %></th>
+      <th><%= model_class.human_attribute_name(:cash_flow) %></th>
+      <th><%= model_class.human_attribute_name(:balance_sheet) %></th>
+      <th><%= model_class.human_attribute_name(:long_term) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @business_plans.each do |business_plan| %>
       <tr>
+        <td><%= business_plan.id %></td>
         <td><%= business_plan.title %></td>
         <td><%= business_plan.ownership %></td>
         <td><%= business_plan.start_plan %></td>
@@ -82,14 +86,21 @@
         <td><%= business_plan.cash_flow %></td>
         <td><%= business_plan.balance_sheet %></td>
         <td><%= business_plan.long_term %></td>
-        <td><%= link_to 'Show', business_plan %></td>
-        <td><%= link_to 'Edit', edit_business_plan_path(business_plan) %></td>
-        <td><%= link_to 'Destroy', business_plan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%=l business_plan.created_at, format: :long %></td>
+        <td>
+          <%= link_to business_plan_path(business_plan), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
+            <%= glyph 'info-sign' %>
+            <%= glyph 'pencil' %>
+          <%- end -%>
+          <%= link_to business_plan_path(business_plan), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs', :title => "#{ t('.destroy', :default => t('helpers.links.destroy')) }" do %>
+            <%= glyph 'remove' %>
+          <%- end -%>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Business plan', new_business_plan_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_business_plan_path,
+            :class => 'btn btn-primary' %>

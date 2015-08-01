@@ -1,46 +1,226 @@
-<%= simple_form_for(@business_plan) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :ownership %>
-    <%= f.input :start_plan %>
-    <%= f.input :location %>
-    <%= f.input :organization_structure %>
-    <%= f.input :management_team %>
-    <%= f.input :team_gaps %>
-    <%= f.input :personnel_plan %>
-    <%= f.input :product_desc %>
-    <%= f.input :sourcing_and_fulfillment %>
-    <%= f.input :technology_used %>
-    <%= f.input :expansion_plan %>
-    <%= f.input :value_prop %>
-    <%= f.input :competitive_advantage %>
-    <%= f.input :positioning_statement %>
-    <%= f.input :pricing_strategy %>
-    <%= f.input :general_promo_strat %>
-    <%= f.input :distro_patterns %>
-    <%= f.input :sales_strat %>
-    <%= f.input :sales_programs %>
-    <%= f.input :strategic_partner %>
-    <%= f.input :milestone %>
-    <%= f.input :segmentation_strategy %>
-    <%= f.input :market_needs %>
-    <%= f.input :market_trends %>
-    <%= f.input :market_growth_potential %>
-    <%= f.input :industry_analysis %>
-    <%= f.input :industry_participants %>
-    <%= f.input :distro_patterns %>
-    <%= f.input :buying_patterns %>
-    <%= f.input :financial_assumptions %>
-    <%= f.input :financial_indicators %>
-    <%= f.input :pandl %>
-    <%= f.input :cash_flow %>
-    <%= f.input :balance_sheet %>
-    <%= f.input :long_term %>
+<%= form_for @business_plan, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :title, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :title, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :ownership, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :ownership, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :start_plan, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :start_plan, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :location, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :location, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :organization_structure, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :organization_structure, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :management_team, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :management_team, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :team_gaps, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :team_gaps, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :personnel_plan, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :personnel_plan, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :product_desc, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :product_desc, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :sourcing_and_fulfillment, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :sourcing_and_fulfillment, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :technology_used, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :technology_used, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :expansion_plan, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :expansion_plan, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :value_prop, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :value_prop, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :competitive_advantage, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :competitive_advantage, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :positioning_statement, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :positioning_statement, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :pricing_strategy, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :pricing_strategy, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :general_promo_strat, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :general_promo_strat, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :distro_patterns, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :distro_patterns, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :sales_strat, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :sales_strat, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :sales_programs, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :sales_programs, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :strategic_partner, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :strategic_partner, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :milestone, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :milestone, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :segmentation_strategy, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :segmentation_strategy, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :market_needs, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :market_needs, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :market_trends, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :market_trends, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :market_growth_potential, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :market_growth_potential, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :industry_analysis, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :industry_analysis, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :industry_participants, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :industry_participants, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :distro_patterns, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :distro_patterns, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :buying_patterns, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :buying_patterns, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :financial_assumptions, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :financial_assumptions, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :financial_indicators, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :financial_indicators, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :pandl, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :pandl, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :cash_flow, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :cash_flow, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :balance_sheet, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :balance_sheet, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :long_term, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :long_term, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  business_plans_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>
